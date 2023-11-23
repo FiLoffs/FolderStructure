@@ -1,0 +1,12 @@
+﻿@model IEnumerable<FiL.FolderStructureMvc.Entities.Folder>
+
+<h1 class="display-6 mb-3">"Folder" - @ViewBag.Name</h1>
+
+<ul class="p-0">
+    @foreach (var item in Model)
+    {
+        <li class="list-group">
+            <a class="list-group-item font-monospace" asp-controller="Folders" asp-action="Index" asp-route-name="@item.Name">@item.Name</a>
+        </li>
+    }
+</ul>
