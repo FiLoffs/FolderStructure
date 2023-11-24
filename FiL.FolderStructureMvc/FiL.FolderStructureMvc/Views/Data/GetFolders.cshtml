@@ -1,0 +1,14 @@
+﻿
+<h1>GetFolders</h1>
+
+<ul class="p-0">
+
+    @foreach (var item in (List<string>)ViewData["Folders"])
+    {
+        <li class="list-group">
+            @item
+        </li>
+    }
+</ul>
+
+
