@@ -2,11 +2,26 @@
 
 <h1 class="display-6 mb-3">"Folder" - @ViewBag.Name</h1>
 
-<ul class="p-0">
-    @foreach (var item in Model)
-    {
-        <li class="list-group">
-            <a class="list-group-item font-monospace" asp-controller="Folders" asp-action="Index" asp-route-name="@item.Name">@item.Name</a>
-        </li>
-    }
-</ul>
+@if(Model.Count() != 0)
+{
+    <ul class="p-0">
+
+        @foreach (var item in Model)
+        {
+            <li class="list-group">
+                <a class="list-group-item font-monospace" asp-controller="Folders" asp-action="Index" asp-route-name="@item.Name">@item.Name</a>
+            </li>
+        }
+    
+    </ul>
+}
+
+<div>
+    <button class="btn btn-outline-success">
+        <a class="text-decoration-none" asp-controller="Folders" asp-action="InitializeDefaultData">Write Default Data to DB</a>
+    </button>
+    <button class="btn btn-outline-danger">
+        <a class="text-decoration-none" asp-controller="Folders" asp-action="DeleteData">Remove Data from DB</a>
+    </button> 
+
+</div>

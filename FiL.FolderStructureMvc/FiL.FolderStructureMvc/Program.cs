@@ -1,4 +1,5 @@
 using FiL.FolderStructureMvc;
+using FiL.FolderStructureMvc.Controllers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,8 @@ using (var scope = app.Services.GetService<IServiceScopeFactory>().CreateScope()
     try
     {
         var context = services.GetRequiredService<ApplicationDbContext>();
-        SampleData.Initialize(context);
+        FoldersController controller = new FoldersController(context);
+        controller.InitializeDefaultData();
     }
     catch (Exception ex)
     {
