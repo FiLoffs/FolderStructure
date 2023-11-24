@@ -17,3 +17,8 @@ GFL TZ 1
 ### Відео демонстрації роботи програми з основної частини завдання (Part 01, без додаткових бонусних питань).
 https://github.com/FiLoffs/FolderStructure/assets/18027212/a9ec59f0-f03f-45e4-834d-79d70833da3c
 
+### Відео демонстрації зчитування структури папок.
+https://github.com/FiLoffs/FolderStructure/assets/18027212/371fcb56-a987-42e2-bb99-88eb2d83b4e0
+
+
+
